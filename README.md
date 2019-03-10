@@ -23,55 +23,55 @@ using ZinniaSharp;
 // Create a recognizer
 using (var recognizer = new Recognizer("handwriting-ja.model"))
 {
-	// Create a new character
-	using (var character = new Character(300, 300))
-	{
-		// Add strokes
-		character.AddStroke()
-			.Add(51, 29)
-			.Add(117, 41);
+    // Create a new character
+    using (var character = new Character(300, 300))
+    {
+        // Add strokes
+        character.AddStroke()
+            .Add(51, 29)
+            .Add(117, 41);
 
-		character.AddStroke()
-			.Add(99, 65)
-			.Add(219, 77);
+        character.AddStroke()
+            .Add(99, 65)
+            .Add(219, 77);
 
-		character.AddStroke()
-			.Add(27, 131)
-			.Add(261, 131);
+        character.AddStroke()
+            .Add(27, 131)
+            .Add(261, 131);
 
-		character.AddStroke()
-			.Add(129, 17)
-			.Add(57, 203);
+        character.AddStroke()
+            .Add(129, 17)
+            .Add(57, 203);
 
-		character.AddStroke()
-			.Add(111, 71)
-			.Add(219, 173);
+        character.AddStroke()
+            .Add(111, 71)
+            .Add(219, 173);
 
-		character.AddStroke()
-			.Add(81, 161)
-			.Add(93, 281);
+        character.AddStroke()
+            .Add(81, 161)
+            .Add(93, 281);
 
-		character.AddStroke()
-			.Add(99, 167)
-			.Add(207, 167)
-			.Add(189, 245);
+        character.AddStroke()
+            .Add(99, 167)
+            .Add(207, 167)
+            .Add(189, 245);
 
-		character.AddStroke()
-			.Add(99, 227)
-			.Add(189, 227);
+        character.AddStroke()
+            .Add(99, 227)
+            .Add(189, 227);
 
-		character.AddStroke()
-			.Add(111, 257)
-			.Add(189, 245);
+        character.AddStroke()
+            .Add(111, 257)
+            .Add(189, 245);
 
-		// Classify character
-		var results = recognizer.Classify(character, 10);
+        // Classify character
+        var results = recognizer.Classify(character, 10);
 
-		// Print results
-		foreach (var match in results)
-		{
-			Console.WriteLine($"{match.Value}: {match.Score}");
-		}
-	}
+        // Print results
+        foreach (var match in results)
+        {
+            Console.WriteLine($"{match.Value}: {match.Score}");
+        }
+    }
 }
 ```
