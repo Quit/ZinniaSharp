@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU</Platforms>
+    <LangVersion>7.1</LangVersion>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <ProductVersion>$(AssemblyVersion)</ProductVersion>
+    <Version>$(AssemblyVersion)</Version>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="handwriting-ja.model" />
+    <None Remove="x64\libzinnia.dll" />
+    <None Remove="x86\libzinnia.dll" />
+
+    <Content Include="handwriting-ja.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libzinnia.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libzinnia.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
